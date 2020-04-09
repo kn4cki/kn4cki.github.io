@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8"/>
+<title>QR Code Reader</title>
+<link href="style.css" rel="stylesheet" type="text/css">
+
+<link rel="manifest" href="/manifest.json">
+<meta name="theme-color" content="#2c3e50">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="theme-color" content="red"/>
+
+
+
+<script src="value.js"></script>
+<script src="webqr.js"></script>
+</head>
+<body>
+<div class="top">QR Code Reader</div>
+<div id="alerte">Aucun QR Code de trouvé.</div>
+<b class="information">Le document a été créé le :</b>
+<div class="affichage" id="creation">09/04/2020 à 17h15</div>
+<b class="information">Par Mme / Mr :</b>
+<div class="affichage" id="homfem">Jean Dupont</div>
+<b class="information">Né(e) le :</b>
+<div class="affichage" id="naissance">01/01/1970</div>
+<b class="information">Demeurant :</b>
+<div class="affichage" id="demeure">999 avenue de France 75001 Paris</div>
+<b class="information">Cette personne est sortie le :</b>
+<div class="affichage" id="quand">09/04/2020 a 17h15</div>
+<b class="information">Pour la / les raison(s) suivante(s) :</b>
+<div class="affichage" id="raison">travail-courses</div>
+<div class="sepa"></div>
+
+<label for="file" class="label-file">SCANNER</label>
+<input id="file" class="input-file" type=file accept="image/*" capture=environment onchange="openQRCamera(this);">
+</body>
+</html>
